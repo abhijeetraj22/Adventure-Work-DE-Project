@@ -1,0 +1,17 @@
+{
+	"name": "CreateViewGold",
+	"properties": {
+		"content": {
+			"query": "---------------------------------\n-- CREATE VIEW Calendar\n--------------------------------\nCREATE VIEW gold.calendar\nAS\nSELECT * FROM OPENROWSET(\n    BULK 'https://datastorageproject22.blob.core.windows.net/silver/AdventureWorks_Calendar/',\n    FORMAT = 'PARQUET'\n) as query1\n\n---------------------------------\n-- CREATE VIEW Customers\n--------------------------------\nCREATE VIEW gold.customers\nAS\nSELECT * FROM OPENROWSET(\n    BULK 'https://datastorageproject22.blob.core.windows.net/silver/AdventureWorks_Customers/',\n    FORMAT = 'PARQUET'\n) as query2\n\n---------------------------------\n-- CREATE VIEW Products\n--------------------------------\nCREATE VIEW gold.products\nAS\nSELECT * FROM OPENROWSET(\n    BULK 'https://datastorageproject22.blob.core.windows.net/silver/AdventureWorks_Products/',\n    FORMAT = 'PARQUET'\n) as query3\n\n---------------------------------\n-- CREATE VIEW Returns\n--------------------------------\nCREATE VIEW gold.returns\nAS\nSELECT * FROM OPENROWSET(\n    BULK 'https://datastorageproject22.blob.core.windows.net/silver/AdventureWorks_Returns/',\n    FORMAT = 'PARQUET'\n) as query4\n\n---------------------------------\n-- CREATE VIEW Sales\n--------------------------------\nCREATE VIEW gold.sales\nAS\nSELECT * FROM OPENROWSET(\n    BULK 'https://datastorageproject22.blob.core.windows.net/silver/AdventureWorks_Sales/',\n    FORMAT = 'PARQUET'\n) as query5\n\n---------------------------------\n-- CREATE VIEW Territories\n--------------------------------\nCREATE VIEW gold.territories\nAS\nSELECT * FROM OPENROWSET(\n    BULK 'https://datastorageproject22.blob.core.windows.net/silver/AdventureWorks_Territories/',\n    FORMAT = 'PARQUET'\n) as query6\n\n---------------------------------\n-- CREATE VIEW Subcategories\n--------------------------------\nCREATE VIEW gold.subcategories\nAS\nSELECT * FROM OPENROWSET(\n    BULK 'https://datastorageproject22.blob.core.windows.net/silver/Product_Subcategories/',\n    FORMAT = 'PARQUET'\n) as query7",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "awdatabase",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
