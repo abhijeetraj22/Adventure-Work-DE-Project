@@ -16,7 +16,7 @@ An end-to-end data engineering solution built on Azure, implementing the Medalli
 
 ---
 
-## 📸 Architecture Overview
+## 🧭 Architecture Overview
 
 <p align="center">
   <img src="Data/Arch.png" alt="Azure Pipeline Architecture" width="600"/>
