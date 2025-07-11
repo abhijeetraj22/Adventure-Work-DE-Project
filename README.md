@@ -7,17 +7,13 @@ An end-to-end data engineering solution built on Azure, implementing the Medalli
 ---
 
 ## 📸 Architecture Overview
-<p align="center">
-  <img src="https://github.com/username/repo/blob/main/image.png?raw=true" width="300"/>
-</p>
 
 <p align="center">
-  <img src="Data/Architech.png" alt="Azure Pipeline Architecture" width="600"/>
+  <img src="Data/Arch.png" alt="Azure Pipeline Architecture" width="600"/>
   <br>
-  <b>Figure:</b> Azure Pipeline Architecture
 </p>
 
-
+##
 This architecture follows the **Bronze → Silver → Gold** model and consists of:
 
 1. **Data Source**: Public GitHub repository hosting CSV data (Sales, Customers, Products)
@@ -79,6 +75,20 @@ Adventure-Work-DE-Project/
 │   └── etc...
 ```
 ---
+## 🔧 Key Functionalities
+
+| Functionality                             | Description                                                                                                        |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **HTTP-Based Data Ingestion**             | Uses Azure Data Factory (ADF) to fetch raw CSV files from GitHub via HTTP.                                         |
+| **Dynamic Pipeline Execution**            | ADF pipeline is parameterized to loop through multiple files using a Lookup + ForEach pattern.                     |
+| **Raw Data Storage**                      | Ingested data is stored in **Bronze layer** (ADLS Gen2), preserving the raw form.                                  |
+| **Data Transformation (PySpark)**         | Databricks notebooks clean, deduplicate, and join datasets into **Silver** (cleaned) and **Gold** (modeled) zones. |
+| **Data Serving via Synapse**              | External tables are created over Gold zone data for analysis using Azure Synapse Analytics.                        |
+| **Reporting via Power BI**                | Power BI connects to Synapse to build interactive dashboards from the Gold data layer.                             |
+| **Medallion Architecture Implementation** | Enforces best practices in modern data lake architecture using Bronze → Silver → Gold separation.                  |
+| **Infra as Code**                         | JSON templates and ARM files are included to deploy ADF, Synapse, and Databricks components.                       |
+
+---
 
 ## 🛠️ Step-by-Step Pipeline Flow
 
@@ -107,6 +117,16 @@ Adventure-Work-DE-Project/
 ### 🔹 Step 5: Reporting with Power BI
 - Connect to Synapse
 - Build interactive dashboards using cleaned & aggregated data
+
+---
+## 💰 Cost & Pricing
+
+| Service        | Cost Structure                                                 |
+| -------------- | -------------------------------------------------------------- |
+| **ADF**        | Pay-per-activity (e.g. Copy, Data Flow runtime hours)          |
+| **Databricks** | Pay-per-cluster runtime (interactive, job)                     |
+| **Synapse**    | Pay-per-use (serverless) or reserved capacity (dedicated pool) |
+
 
 ---
 ## Connect with me! 🌐
