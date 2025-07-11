@@ -1,4 +1,14 @@
 # 🌐 Adventure Works - Azure Data Engineering Project
+![Azure](https://img.shields.io/badge/Platform-Azure-blue.svg)
+![ADF](https://img.shields.io/badge/Service-DataFactory-0066FF?logo=microsoft-azure)
+![Databricks](https://img.shields.io/badge/Compute-Databricks-red?logo=databricks)
+![ADLS](https://img.shields.io/badge/Storage-ADLS--Gen2-lightgrey?logo=windows)
+![Synapse](https://img.shields.io/badge/Analytics-Synapse-blue?logo=azuredevops)
+![PowerBI](https://img.shields.io/badge/Reporting-PowerBI-yellow?logo=powerbi)
+
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+![Python](https://img.shields.io/badge/Language-PySpark-orange.svg)
+![Notebooks](https://img.shields.io/badge/Environment-Databricks%20Notebook-red)
 
 An end-to-end data engineering solution built on Azure, implementing the Medallion Architecture and demonstrating a complete pipeline from data ingestion to business intelligence.
 
@@ -101,6 +111,12 @@ Adventure-Work-DE-Project/
 - Parameterized **dynamic pipeline** with Lookup + ForEach
 - Data stored in **Bronze layer** of ADLS
 
+### 📸 Azure Data Factory
+<p align="center">
+  <img src="img/DE-1.JPG" alt="Azure Pipeline Architecture" width="800"/>
+  <br>
+</p>
+
 ### 🔹 Step 3: Transformation via Databricks
 - Read raw data from Bronze
 - Apply:
@@ -110,13 +126,31 @@ Adventure-Work-DE-Project/
 - Write clean data to **Silver**
 - Write modeled facts/dims to **Gold**
 
+### 📸 Azure Databricks
+<p align="center">
+  <img src="img/DE-2.JPG" alt="Azure Pipeline Architecture" width="800"/>
+  <br>
+</p>
+
 ### 🔹 Step 4: Serving Layer (Synapse)
 - Create **external tables** on Gold data
 - Enable BI connectivity using **SQL queries**
 
+### 📸 Azure Synapse
+<p align="center">
+  <img src="img/DE-3.JPG" alt="Azure Pipeline Architecture" width="800"/>
+  <br>
+</p>
+
 ### 🔹 Step 5: Reporting with Power BI
 - Connect to Synapse
 - Build interactive dashboards using cleaned & aggregated data
+
+### 📸 PowerBI Demo
+<p align="center">
+  <img src="img/DE-4.JPG" alt="Azure Pipeline Architecture" width="800"/>
+  <br>
+</p>
 
 ---
 ## 💰 Cost & Pricing
