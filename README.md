@@ -1,4 +1,4 @@
-# 🌐 Adventure Works - Azure Data Engineering Project
+# 🌐 Azure Data Engineering Pipeline (Adventure Works) 
 ![Azure](https://img.shields.io/badge/Platform-Azure-blue.svg)
 ![ADF](https://img.shields.io/badge/Service-DataFactory-0066FF?logo=microsoft-azure)
 ![Databricks](https://img.shields.io/badge/Compute-Databricks-red?logo=databricks)
