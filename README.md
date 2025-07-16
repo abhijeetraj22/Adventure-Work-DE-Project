@@ -1,4 +1,4 @@
-# 🌐 Azure Data Engineering Pipeline (Adventure Works) 
+# 🌐 Azure Data Pipeline with ADF Databricks & Synapse (Adventure Works Data)
 ![Azure](https://img.shields.io/badge/Platform-Azure-blue.svg)
 ![ADF](https://img.shields.io/badge/Service-DataFactory-0066FF?logo=microsoft-azure)
 ![Databricks](https://img.shields.io/badge/Compute-Databricks-red?logo=databricks)
@@ -12,7 +12,7 @@
 
 An end-to-end data engineering solution built on Azure, implementing the Medallion Architecture and demonstrating a complete pipeline from data ingestion to business intelligence.
 
-> GitHub Repo: [Adventure-Work-DE-Project](https://github.com/abhijeetraj22/Adventure-Work-DE-Project)
+> GitHub Repo: [Azure Data Pipeline with ADF Databricks & Synapse](https://github.com/abhijeetraj22/Azure-Data-Pipeline-with-ADF-Databricks-Synapse)
 
 ---
 
@@ -51,7 +51,7 @@ This architecture follows the **Bronze → Silver → Gold** model and consists 
 ## 📁 Repository Structure
 
 ```bash
-Adventure-Work-DE-Project/
+Azure-Data-Pipeline-with-ADF-Databricks-Synapse/
 │
 ├── README.md                      # This file
 │
